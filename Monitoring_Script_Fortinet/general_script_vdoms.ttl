@@ -1,0 +1,77 @@
+; disable page by page display & enable debug
+	sendln 'config global'
+	sendln 'config system console'
+	sendln 'set output standard'
+	sendln 'end'
+	sendln 'diag debug reset'
+	sendln 'diag debug enable'
+	pause 1
+
+; infinite loop
+while 1
+	
+	; global check
+	sendln 'exec date'
+	sendln 'exec time'
+	pause 1
+	sendln 'get sys status'
+	sendln 'get sys perf status'
+	sendln 'diag sys session full-stat'
+	pause 1
+	sendln 'fnsysctl cat /proc/stat'
+	pause 1
+	sendln 'fnsysctl cat /proc/interrupts'
+	pause 1
+
+	; diag sys top procedure
+    sendln 'diag sys top 3 30'
+	pause 2
+	sendln 'q'
+	pause 1
+	
+	; memory
+	sendln 'diag hard sys mem'
+	pause 1
+	sendln 'diag hard sys shm'
+	pause 1
+	sendln 'diag hard sys slab'
+	pause 1
+	sendln 'diag ips memory status'
+	pause 2
+	sendln 'diagnose wad memory all'
+	pause 2
+	sendln 'fnsysctl df -h'
+	pause 1
+	
+	; IPS debugs
+	sendln 'diag ips dissector status'
+	pause 2
+	sendln 'diag ips session stat'
+	pause 2
+	sendln 'diag ips session performance'
+	pause 2
+
+; exit global-level
+sendln 'end'
+pause 1
+
+; enter root vdom
+	sendln 'config vdom'
+	sendln 'edit root'
+	pause 1
+
+	sendln 'diag snmp ip frags'
+	pause 1
+	sendln 'diag firewall packet distribution'
+	pause 1
+	sendln 'get sys performance firewall statistics'
+	pause 1
+
+; go back to global-level
+sendln 'end'
+sendln 'config global'
+pause 1
+
+; wait 5 minutes before next iteration of the system snapshot
+pause 300
+endwhile
