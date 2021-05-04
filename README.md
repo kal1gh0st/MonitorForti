@@ -13,6 +13,7 @@ CLI command sets in the Debug flow :
 Note : 6) "diagnose debug flow show console enable" is not available in FortiOS 5.6.0 or higher
 
 The meaning of each line:
+![immagine](https://user-images.githubusercontent.com/56889513/117016463-08d2df80-acf3-11eb-8fb5-19d13301041a.png)
 
 1) To disable the debug command. In case we don't know that it has the debug CLI command still running in the unit or not? So we may disable first.
 2) To stop the trace of debugging.
