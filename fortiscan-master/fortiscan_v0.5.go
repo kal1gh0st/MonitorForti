@@ -14,9 +14,9 @@ import (
 	"github.com/common-nighthawk/go-figure"
 )
 
-var codername = "Anas Bousselham"
+var codername = "Francesco Fedele"
 var ver = "0.5"
-var eml = "anasoft@gmail.com"
+var eml = "fedele.kali17@gmail.com"
 
 func logo() {
 	myFigure := figure.NewFigure("fortiScan", "", true)
