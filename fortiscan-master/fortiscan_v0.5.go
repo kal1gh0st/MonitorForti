@@ -1,5 +1,5 @@
 // # FortiScan SSL VPN Directory Traversal Vulnerability (FG-IR-18-384) # //
-// Bousselham Anas
+// # Author: kal1gh0st
 
 package main
 
